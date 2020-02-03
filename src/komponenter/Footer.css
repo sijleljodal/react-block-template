@@ -1,0 +1,32 @@
+footer {
+    width: 100vw;
+    height: 20vh;
+    background: rgb(0, 42, 42);
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1;
+    padding-left: 2rem;
+    margin-top: 2rem;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgb(0, 31, 31);
+    font-weight: 400;
+}
+
+p{
+    color: rgb(255,215,0);
+    border-width: 1px;
+    height: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+svg.some-icons{
+    color: rgb(255,215,0);
+    size: 2rem;
+}

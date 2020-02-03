@@ -1,0 +1,79 @@
+.project{
+    height: 500px;
+    background: rgb(0, 42, 42);
+    position: relative;
+    box-shadow:  2px 2px 7px rgb(0, 34, 34);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.project:nth-of-type(odd) .project-content{
+    grid-row-start: 1;
+}
+
+.project-content div, h1, a{
+    padding:2rem;
+   /* display: grid;*/
+}
+.project h1{
+    font-size: 1.2rem;
+    color: rgb(255,215,0);
+    font-weight: 300;
+}
+
+.project p {
+    color: whitesmoke;
+    padding-bottom: 1rem;
+}
+
+.admin-icons{
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    gap:1rem;
+}
+
+.edit-icons{
+    color: rgb(0, 32, 32);
+}
+
+.project img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.project.active{
+    position: absolute;
+    padding: 10vh 20vh;
+    top:0;
+    left:0;
+    z-index:1;
+    min-width: 100vw;
+    min-height: 100vh;
+    animation: zoomIn is ease;
+}
+
+svg{
+   color: rgb(250, 232, 30);
+   padding-left: .2rem;
+}
+
+@keyframes zoomIn{
+    from{
+        transform:scale(0.0);
+    }
+    to{
+        transform: scale(100vw, 100vh);
+    }
+}
+
+@media (max-width:1000px){
+    .project{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
+}

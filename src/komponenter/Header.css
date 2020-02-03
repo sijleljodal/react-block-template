@@ -1,0 +1,79 @@
+.header-container{
+    position: fixed;
+    width: 100vw;
+    height: 15vh;
+    background: (0, 51, 51, 0.8);
+    color: rgb(250, 250, 250);
+    display: grid;
+    place-items: center;
+    z-index: 2;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    background: rgb(0, 51, 51, 0.8);
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: left;
+    align-items: center;
+    gap: 1rem;
+    z-index: 2;
+    padding: 2rem;
+}
+
+.burger{
+    display: none;
+    z-index: 2;
+    position: absolute;
+    cursor: pointer;
+}
+
+header a{
+    text-decoration: none;
+    font-weight: 400;
+    color: rgb(0, 31, 31);
+}
+
+[aria-current='page'], .active {
+    font-weight: 700;
+    color: rgb(250, 232, 30);
+}
+
+header img{
+    width: 9%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+img{
+    padding: 0;
+}
+
+@media (max-width:1000px){
+    header{
+        width: 100%;
+        transform:translateY(-100%);
+        grid-auto-flow: row;
+        align-content: center;
+        min-height: 100vh;
+        transition: .4s ease;
+    }
+    header a{
+        font-size: 3rem;
+        color: whitesmoke;
+    }
+
+    header.visible{
+        background-color: rgb(3, 55, 55);
+        transform:translateY(0);
+    }
+    .burger{
+        display: block;
+    }
+    main{
+        padding: 30vh 5vh;
+    }
+
+}

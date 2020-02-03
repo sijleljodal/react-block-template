@@ -1,0 +1,10 @@
+main.login{
+    align-items: left;
+}
+
+.login img {
+    width: 200px;
+    margin-bottom: 1rem;
+    box-shadow:  2px 2px 7px rgb(0, 34, 34);
+    border-radius: 50%;
+}

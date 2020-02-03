@@ -1,0 +1,89 @@
+input, textarea, label, select, button, .button{
+    font-size: 1rem;
+    padding: .5rem;
+    display: block;
+    margin-bottom: 1rem;
+    color: rgb(0, 0, 0);
+    margin:1rem;
+  }
+  .edit-icons {
+    transform:scale(1.5);
+  }
+  
+  .edit-icons{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+  }
+
+  .project-images{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1 fr));
+    gap: .2rem;
+    margin-bottom: 1rem;
+    justify-content: left;
+  }
+  .project-images > div {
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+  .project-images > div h3{
+    position: relative;
+    background-color: rgb(0, 51, 51, 0.8);
+    font-size: 1rem;
+    color: whitesmoke;
+  }
+
+  .project-images img{
+    height: 200px;    
+    width: 200px;
+    display: flex;
+    margin-top: 1rem;
+  }
+  
+  input, textarea{
+    background-color:  rgb(0, 42, 42);
+    border: none;
+    box-shadow:  2px 2px 5px rgb(0, 34, 34);
+  }
+  
+  textarea{
+    min-width: 50vw;
+    min-height: 10rem;
+    margin: 1rem;
+  }
+  
+ .edit img{
+    width: 5rem;
+  }
+
+  
+  .edit label{
+    padding:0;
+    margin-top: 10px;    
+  }
+
+.edit {
+    animation: slideIn 6s ease;
+}
+
+.ProsjektDef{
+  width: 20vw;
+}
+
+@keyframes slideIn {
+    from{
+        transform:translateX(100%)
+    }
+    to{
+        transform:translateY(0%)
+    }
+}
+
+.checkbox{
+    display: grid;
+    grid-auto-flow: column;
+    gap: .1rem;
+    justify-content: start;
+    align-items: flex-start;
+}
