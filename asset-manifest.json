@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-block-template/static/css/main.826617f2.chunk.css",
+    "main.js": "/react-block-template/static/js/main.f3e2e133.chunk.js",
+    "main.js.map": "/react-block-template/static/js/main.f3e2e133.chunk.js.map",
+    "runtime-main.js": "/react-block-template/static/js/runtime-main.fb661ec1.js",
+    "runtime-main.js.map": "/react-block-template/static/js/runtime-main.fb661ec1.js.map",
+    "static/js/2.5b959f76.chunk.js": "/react-block-template/static/js/2.5b959f76.chunk.js",
+    "static/js/2.5b959f76.chunk.js.map": "/react-block-template/static/js/2.5b959f76.chunk.js.map",
+    "index.html": "/react-block-template/index.html",
+    "precache-manifest.7167399aab538e3cb2a2d59f63c1a6e5.js": "/react-block-template/precache-manifest.7167399aab538e3cb2a2d59f63c1a6e5.js",
+    "service-worker.js": "/react-block-template/service-worker.js",
+    "static/css/main.826617f2.chunk.css.map": "/react-block-template/static/css/main.826617f2.chunk.css.map",
+    "static/js/2.5b959f76.chunk.js.LICENSE": "/react-block-template/static/js/2.5b959f76.chunk.js.LICENSE",
+    "static/media/undskr.png": "/react-block-template/static/media/undskr.3bf176e0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fb661ec1.js",
+    "static/js/2.5b959f76.chunk.js",
+    "static/css/main.826617f2.chunk.css",
+    "static/js/main.f3e2e133.chunk.js"
+  ]
+}
