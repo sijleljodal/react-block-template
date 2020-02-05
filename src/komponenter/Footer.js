@@ -12,14 +12,6 @@ const Footer = () => {
             <a href='https://www.behance.net/siljeljoda418d?tracking_source=search-all%7Csilje%20lj%C3%B8dal' target="_blank" rel="noopener noreferrer"><AiFillBehanceCircle className="some-icons" /></a>
 
             <a href='https://www.instagram.com/slj__art/' target="_blank" rel="noopener noreferrer"><AiFillInstagram className="some-icons" /></a>
-
-    
-           <div>
-            <p>email: silje.ljodal@gmail.com</p>
-            <p>tel: 452 65 559</p>
-           </div>
-           
-        
       
         </footer>
     )

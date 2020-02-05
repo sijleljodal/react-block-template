@@ -42,6 +42,7 @@ const ProjectDetail = props => {
             },
         }
     } 
+
     return (
         <main className="project-detail">
             {
@@ -53,6 +54,8 @@ const ProjectDetail = props => {
                     <div style={styles.parallax}>
                         <div className='parallax-overlay'>
                             <div>
+                    <div>
+                            </div> 
                                 <h1>{project.title}</h1>
                                 <p>{project.year}</p>
                                 <div className='project-features'>
@@ -93,6 +96,9 @@ const ProjectDetail = props => {
 
                     <div className='description'>
                         {project.description && parse(project.description)}
+                    </div>
+                    <div className='langfil'>
+                        {project.langfil && <img src={project.langfil} alt='langfil' />}
                     </div>
                 </div>
             </div>

@@ -1,3 +1,4 @@
+
 main.project-detail{
     padding:0;
     justify-content: start;
@@ -19,7 +20,7 @@ main.project-detail{
 }
 
 .project-content > div, h1{
-    color: whitesmoke;
+    color: rgb(255, 162, 36);
     place-items: center;
     justify-content: center;
 }
@@ -47,4 +48,21 @@ main.project-detail{
 
 .project .description{
     text-align:left;
+}
+
+p, h2{
+    font-size: 1.2rem;
+    grid-template-columns: 1fr 2fr;
+    display: grid;
+    margin-left: 10%;
+    line-height: 1.5rem;
+
+}
+
+.langfil img{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+
 }

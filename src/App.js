@@ -11,14 +11,9 @@ import firebase from './komponenter/firebase'
 import Edit from './komponenter/Edit'
 import Footer from './komponenter/Footer'
 
-const Default = () => {
-  navigate('/projects')
-  return(<></>)
-}
-
-
 const App = () => {
 
+  console.log('i am the new one')
   const [signedIn, setSignedIn] =useState(false)
 
   useEffect( ()  => {
@@ -36,13 +31,12 @@ const App = () => {
   return(
       <div>
       <Header signedIn={signedIn}/>
-        <Router>
-          <Default path='/' Default />
-          <Projects signedIn={signedIn} path='/projects' />
+        <Router basepath={process.env.PUBLIC_URL}>
+          <Projects default signedIn={signedIn} path='/projects' />
           <Contact path='/contact' />
           <ProjectDetails path='/projects/:id' />
           <Cv path='/cv' />
-          <Login signedIn={signedIn} setSignedIn={setSignedIn} path='/login' />
+          <Login signedIn={signedIn} setSignedIn={setSignedIn} path='/login'/>
           <Edit path='/edit/:id' />
         </Router>
         <Footer />

@@ -20,7 +20,7 @@ const addProject = () => {
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
         }
     )
-    .then( doc => navigate('/edit/' + doc.id) )
+    .then( doc => navigate(process.env.PUBLIC_URL + '/edit/' + doc.id) )
 }
     useEffect( () => {
         firebase

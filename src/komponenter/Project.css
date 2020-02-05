@@ -1,24 +1,50 @@
 .project{
-    height: 500px;
-    background: rgb(0, 42, 42);
+    height: 800px;
     position: relative;
-    box-shadow:  2px 2px 7px rgb(0, 34, 34);
+    /*box-shadow:  2px 2px 7px rgb(0, 34, 34);*/
+    overflow:hidden;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    place-items: center;
+    grid-auto-flow: row;
 }
 
-.project:nth-of-type(odd) .project-content{
+
+.project-content {
+    transition: 6s ease;
+    background: rgb(0, 25, 25);
+    place-items: left;
+}
+
+
+.project img {
+    width: 50%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.project:nth-of-type(odd) .project-content, .intro-project{
     grid-row-start: 1;
+    text-align: right;
+    display: grid;
 }
 
-.project-content div, h1, a{
-    padding:2rem;
-   /* display: grid;*/
+.project:nth-of-type(even) .project-content, .intro-project{
+    grid-row-start: 2;
+    text-align: right;
+    display: grid;
 }
-.project h1{
-    font-size: 1.2rem;
-    color: rgb(255,215,0);
-    font-weight: 300;
+
+
+#intro-project{
+    margin-left: 20%;
+    z-index: 2;
+}
+
+.project-content .verktoy{
+    display: table-row;
+    justify-content: center;
+    align-items: center;
 }
 
 .project p {
@@ -37,28 +63,11 @@
 }
 
 .edit-icons{
-    color: rgb(0, 32, 32);
-}
-
-.project img {
-    width: 100%;
-    object-fit: cover;
-    object-position: center top;
-}
-
-.project.active{
-    position: absolute;
-    padding: 10vh 20vh;
-    top:0;
-    left:0;
-    z-index:1;
-    min-width: 100vw;
-    min-height: 100vh;
-    animation: zoomIn is ease;
+    color: rgb(105, 105, 105);
 }
 
 svg{
-   color: rgb(250, 232, 30);
+   color: rgb(255, 162, 36);
    padding-left: .2rem;
 }
 
@@ -76,4 +85,10 @@ svg{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 2fr;
     }
+    .project-content #intro-project{
+        font-size: 2rem;
+        text-align: center;
+        display: grid;
+    }
+
 }

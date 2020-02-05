@@ -11,40 +11,41 @@ input, textarea, label, select, button, .button{
   }
   
   .edit-icons{
-    color: rgb(0, 0, 0);
+    color: rgb(199, 199, 199);
     cursor: pointer;
+    z-index: 1;
   }
 
   .project-images{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1 fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: .2rem;
     margin-bottom: 1rem;
     justify-content: left;
-  }
-  .project-images > div {
-    display: grid;
-    place-items: center;
-    position: relative;
-  }
-  .project-images > div h3{
-    position: relative;
-    background-color: rgb(0, 51, 51, 0.8);
-    font-size: 1rem;
-    color: whitesmoke;
+    margin:2rem 0 2rem 0;
   }
 
+  .project-images > div{
+    min-width:100%;
+    height:150px;
+    display:grid;
+    place-items:center;
+    position:relative;
+  }
+
+  .project-images h3{
+    position:absolute; 
+  }
   .project-images img{
-    height: 200px;    
-    width: 200px;
-    display: flex;
-    margin-top: 1rem;
+    width: 100%;    
+    height:100%;
+    object-fit:cover;
   }
   
   input, textarea{
-    background-color:  rgb(0, 42, 42);
+    background-color:  rgb(177, 177, 177);
     border: none;
-    box-shadow:  2px 2px 5px rgb(0, 34, 34);
+    box-shadow:  2px 2px 5px rgb(75, 75, 75);
   }
   
   textarea{

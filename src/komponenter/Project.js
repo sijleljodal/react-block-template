@@ -27,10 +27,19 @@ const Project = (props) => {
        <div className='project'>
             {
                 props.data.defaultImage &&
-                <img onClick={ () => navigate('/projects/' + props.id) } src={props.data.defaultImage} alt ='defaul' />
+                <img onClick={ () => navigate(process.env.PUBLIC_URL + '/projects/' + props.id) } 
+                src={props.data.defaultImage} alt ='default' />
             }
             <div className='project-content'>
-                <h1>{props.data.title}</h1>
+                <h1 id="intro-project">{props.data.title}</h1>
+                <div id="intro-project">
+                    {props.data.year}
+                </div>
+                <div id="intro-project">
+                    {props.data.byline}
+                </div>
+
+                <div className='verktoy'>
             
                 {
                     props.data.javascript && 
@@ -38,26 +47,21 @@ const Project = (props) => {
                 }
                 {
                     props.data.html && 
-                    <IoLogoHtml5 size='25'/>
+                    <IoLogoHtml5 size='40'/>
                 }
                 {
                     props.data.css && 
-                    <IoLogoCss3 size='25'/>
+                    <IoLogoCss3 size='40'/>
                 }
                 {
                     props.data.adobe && 
-                    <FaAdobe size='25'/>
+                    <FaAdobe size='40'/>
                 }
+                </div>
+
+            
+
                 
-
-                <div className='year'>
-                    {props.data.year}
-                </div>
-                <div className='byline'>
-                    {props.data.byline}
-                </div>
-
-                <Link to={'/projects/' + props.id}>Les mer</Link>
             </div>
             {
             props.signedIn &&

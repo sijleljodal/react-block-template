@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link, navigate } from '@reach/router'
 import './Header.css'
 import underskrift from './images/undskr.png'
 
 const Header = ( props ) => {
+
+  const [show, setShow] = useState(false)
 
     const isPartiallyActive = ({
         isPartiallyCurrent
@@ -14,12 +16,13 @@ const Header = ( props ) => {
       }
 
     return(
-        <header>
+        <header className={show ? 'mobile' : ''} onClick={ () => setShow(false)}>
             
-            <img onClick={ () => navigate('/projects/')} src={underskrift} alt='underskrift'></img>
+            <img onClick={ () => navigate(process.env.PUBLIC_URL + '/projects/')} src={underskrift} alt='underskrift'></img>
             
-        <Link to='/projects' getProps={isPartiallyActive}>PROSJEKTER</Link>
-        <Link to='/contact'>OM</Link>
+        <Link to={process.env.PUBLIC_URL + '/projects'} getProps={isPartiallyActive}>PROSJEKTER</Link>
+        <Link to={process.env.PUBLIC_URL + '/contact'}>OM</Link>
+        <Link to ='/login'>LOGIN</Link>
     
       </header>
     )

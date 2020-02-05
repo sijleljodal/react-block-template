@@ -1,17 +1,8 @@
-.lj {
+*{
+    color: rgb(255, 162, 36);
+}
+.lj p{
     font-size: 5rem;
+    line-height: 70px;
 }
-
-.omTekst{
-    grid-auto-flow: column;
-    justify-content: left;
-    align-items: left;
-    font-size: 1.2rem;
-    position: relative;
-    padding-bottom: 1rem;
-    z-index: 1;
-}
-
-.current{
-    align-items: left;
-}
+ 
