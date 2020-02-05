@@ -3,6 +3,10 @@
 }
 .lj p{
     font-size: 5rem;
-    line-height: 70px;
+    line-height: 90px;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+
 }
+
  

@@ -26,42 +26,41 @@ const Project = (props) => {
     return(
        <div className='project'>
             {
-                props.data.defaultImage &&
+                props.data.defaultImage ?
                 <img onClick={ () => navigate(process.env.PUBLIC_URL + '/projects/' + props.id) } 
                 src={props.data.defaultImage} alt ='default' />
+                : <div />
             }
             <div className='project-content'>
-                <h1 id="intro-project">{props.data.title}</h1>
-                <div id="intro-project">
-                    {props.data.year}
-                </div>
-                <div id="intro-project">
-                    {props.data.byline}
-                </div>
+                <div className='abs'>
+                    <h1 id="intro-project">{props.data.title}</h1>
+                    <div id="intro-project">
+                        {props.data.year}
+                    </div>
+                    <div id="intro-project">
+                        {props.data.byline}
+                    </div>
 
-                <div className='verktoy'>
-            
-                {
-                    props.data.javascript && 
-                    <IoLogoJavascript size='25'/>
-                }
-                {
-                    props.data.html && 
-                    <IoLogoHtml5 size='40'/>
-                }
-                {
-                    props.data.css && 
-                    <IoLogoCss3 size='40'/>
-                }
-                {
-                    props.data.adobe && 
-                    <FaAdobe size='40'/>
-                }
-                </div>
-
-            
-
+                    <div className='verktoy'>
                 
+                    {
+                        props.data.javascript && 
+                        <IoLogoJavascript size='25'/>
+                    }
+                    {
+                        props.data.html && 
+                        <IoLogoHtml5 size='40'/>
+                    }
+                    {
+                        props.data.css && 
+                        <IoLogoCss3 size='40'/>
+                    }
+                    {
+                        props.data.adobe && 
+                        <FaAdobe size='40'/>
+                    }
+                    </div>                
+                </div>
             </div>
             {
             props.signedIn &&
@@ -70,9 +69,8 @@ const Project = (props) => {
                     <MdEdit  className='edit-icons'/>
                 </Link>
                 <MdDelete onClick={deleteProject} className='edit-icons'/>
-                
             </div>
-  }
+            }
         </div>
     )
 }

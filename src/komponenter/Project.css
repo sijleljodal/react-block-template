@@ -1,56 +1,39 @@
 .project{
-    height: 800px;
     position: relative;
-    /*box-shadow:  2px 2px 7px rgb(0, 34, 34);*/
-    overflow:hidden;
-    display: grid;
-    grid-template-columns: 1fr;
-    place-items: center;
-    grid-auto-flow: row;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    height:70vh;
 }
-
-
 .project-content {
     transition: 6s ease;
     background: rgb(0, 25, 25);
-    place-items: left;
+    color: whitesmoke;
+    position:relative;
+}
+
+.project-content .abs{
+    position:absolute;
+    top:50px;
+    right:-50px;
+}
+.project:nth-of-type(even) .project-content .abs{
+    top:50px;
+    left:-50px;
+    right:auto;
 }
 
 
 .project img {
-    width: 50%;
+    width: 100%;
+    height:100%;
     object-fit: cover;
     object-position: center top;
+    box-shadow: 0 8px 6px -6px black;
 }
-
-.project:nth-of-type(odd) .project-content, .intro-project{
+.project:nth-of-type(odd) .project-content{
     grid-row-start: 1;
-    text-align: right;
-    display: grid;
 }
 
-.project:nth-of-type(even) .project-content, .intro-project{
-    grid-row-start: 2;
-    text-align: right;
-    display: grid;
-}
-
-
-#intro-project{
-    margin-left: 20%;
-    z-index: 2;
-}
-
-.project-content .verktoy{
-    display: table-row;
-    justify-content: center;
-    align-items: center;
-}
-
-.project p {
-    color: whitesmoke;
-    padding-bottom: 1rem;
-}
 
 .admin-icons{
     position: absolute;
@@ -69,6 +52,7 @@
 svg{
    color: rgb(255, 162, 36);
    padding-left: .2rem;
+   size: 4rem;
 }
 
 @keyframes zoomIn{

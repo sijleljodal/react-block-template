@@ -1,6 +1,6 @@
 .projects-container{
   display: grid;
-  gap:1rem;
+  gap:5rem;
   padding:0 1rem 1rem 1rem;
   background: rgb(0, 25, 25);
 }
